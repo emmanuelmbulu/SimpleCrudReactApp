@@ -20,14 +20,18 @@ export default class ProductList extends React.Component<any, any> {
 
     componentDidMount() {
         (async () => {
-            const response = await ProductService.getAllProducts();
+            try {
+                const response = await ProductService.getAllProducts();
 
-            const listOfProducts:Array<Product> = [];
-            for(let i=0; i < response.data.length; i++) {
-                const item = response.data[i];
-                listOfProducts.push(Product.createProductObject(item));
+                const listOfProducts:Array<Product> = [];
+                for(let i=0; i < response.data.length; i++) {
+                    const item = response.data[i];
+                    listOfProducts.push(Product.createProductObject(item));
+                }
+                this.productsTable?.setData(listOfProducts);
+            } catch (exception) {
+                this.productsTable?.setData([]);
             }
-            this.productsTable?.setData(listOfProducts);
         })();
     }
 
