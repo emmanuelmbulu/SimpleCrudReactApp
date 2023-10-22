@@ -1,0 +1,57 @@
+HELP.md
+target/
+simple-crud-project-backend/!.mvn/wrapper/maven-wrapper.jar
+simple-crud-project-backend/!**/src/main/**/target/
+simple-crud-project-backend/!**/src/test/**/target/
+
+### STS ###
+*.apt_generated
+*.classpath
+*.factorypath
+*.project
+*.settings
+*.springBeans
+*.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/simple-crud-project-backend/nbproject/private/
+/simple-crud-project-backend/nbbuild/
+/simple-crud-project-backend/dist/
+/simple-crud-project-backend/nbdist/
+/simple-crud-project-backend/.nb-gradle/
+simple-crud-project-backend/build/
+simple-crud-project-backend/!**/src/main/**/build/
+simple-crud-project-backend/!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/simple-crud-project-frontend/node_modules
+*.pnp
+*.pnp.js
+
+# testing
+/simple-crud-project-frontend/coverage
+
+# production
+/simple-crud-project-frontend/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
